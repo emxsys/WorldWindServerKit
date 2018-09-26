@@ -10,10 +10,12 @@
         <componentDescriptor>src/assembly/geoserver.xml</componentDescriptor>
         <componentDescriptor>src/assembly/jetty.xml</componentDescriptor>
         <componentDescriptor>src/assembly/java-linux64.xml</componentDescriptor>
+        <componentDescriptor>src/assembly/jai-linux64.xml</componentDescriptor>
         <componentDescriptor>src/assembly/gdal-linux64.xml</componentDescriptor>
         <componentDescriptor>src/assembly/gdal-natives-centos64.xml</componentDescriptor>
         <componentDescriptor>src/assembly/data-base.xml</componentDescriptor>
         <componentDescriptor>src/assembly/data-nasa.xml</componentDescriptor>
+        <componentDescriptor>src/assembly/explorer.xml</componentDescriptor>
     </componentDescriptors>    
     <fileSets>                
         <fileSet>

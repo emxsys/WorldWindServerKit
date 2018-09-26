@@ -7,22 +7,60 @@ application directory.
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>gov.nasa.worldwind</groupId>
+        <groupId>gov.nasa.worldwind.server</groupId>
         <artifactId>worldwind-serverkit</artifactId>
-        <version>0.3.0-SNAPSHOT</version>
+        <version>0.6.0</version>
     </parent>
 
-    <groupId>gov.nasa.worldwind</groupId>
+    <groupId>gov.nasa.worldwind.server</groupId>
     <artifactId>worldwind-gs-geopkg</artifactId>
     <packaging>jar</packaging>
 
+    <!--=====================================================================-->
+    <!--Project Information                                                  -->
+    <!--=====================================================================-->    
     <name>WorldWind GeoPackage Extension</name>
-
     <description>A GeoServer extension providing GeoPackage support with conformance to the 
         National System for Geospatial-Intelligence (NSG) GeoPackage Encoding Standard
         2.0 Interoperability Standard.  NGA.STND.0051_2.0_GEOPKG 2016-09-14
     </description>
-
+    <url>https://github.com/NASAWorldWind/WorldWindServerKit</url>
+    <organization>
+        <name>NASA World Wind</name>
+        <url>https://worldwind.arc.nasa.gov</url>
+    </organization>
+    <licenses>
+        <license>
+            <name>General Public License (GPL)</name>
+            <url>http://www.gnu.org/copyleft/gpl.txt</url>
+        </license>
+    </licenses>
+    <developers />
+    <contributors />
+    <mailingLists />
+    <prerequisites />   
+    <!--=====================================================================-->
+    <!--Environment Settings                                                 -->
+    <!--=====================================================================-->    
+    <scm>
+        <url>https://github.com/NASAWorldWind/WorldWindServerKit</url>
+        <connection>scm:git:git://github.com/NASAWorldWind/WorldWindServerKit.git</connection>
+        <developerConnection>scm:git:https://github.com/NASAWorldWind/WorldWindServerKit.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>    
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/NASAWorldWind/WorldWindServerKit/issues</url>
+    </issueManagement>
+    <ciManagement>
+        <system>Travis CI</system>
+        <url>https://travis-ci.org/NASAWorldWind/WorldWindServerKit</url>
+    </ciManagement>
+    <distributionManagement />    
+    
+    <!--=====================================================================-->
+    <!--The Basics                                                           -->
+    <!--=====================================================================-->    
     <dependencies>
 
         <!--Dependencies common the GeoServer modules-->
@@ -79,10 +117,22 @@ application directory.
             <version>${project.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>worldwind-gs-web</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
         <!--Module Dependencies--> 
         <dependency>
             <groupId>org.geoserver.web</groupId>
             <artifactId>gs-web-core</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.geotools</groupId>
+                    <artifactId>gt-geopkg</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency> 
         <dependency>
             <groupId>org.geoserver</groupId>
@@ -171,6 +221,33 @@ application directory.
         </dependency>
     </dependencies>
     
+    <!--=====================================================================-->
+    <!--Build Settings                                                       -->
+    <!--=====================================================================-->    
+    <build>
+        <plugins />
+        <resources>
+            <resource>
+                <!--
+                Include applicationContext.xml Spring bean factory configuration,
+                Wicket html markup files and images.
+                -->
+                <directory>${basedir}/src/main/java</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>        
+            <resource>
+                <!--
+                Include i8n GeoServerApplication.properties file(s)
+                -->
+                <directory>${basedir}/src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>    
     <profiles>
         <!--Generate the javadocs and sources jar files when the "release" profile is activated-->
         <profile>
@@ -180,7 +257,7 @@ application directory.
                     <name>release</name>
                 </property>
             </activation>
-            <dependencies/>
+            <dependencies />
             <build>
                 <plugins>
                     <plugin>
@@ -209,26 +286,7 @@ application directory.
                     </plugin>               
                 </plugins>
             </build>
-            <modules/>
+            <modules />
         </profile>
-    </profiles>
-    
-    <build>
-        <plugins/>
-        <resources>
-            <resource>
-                <directory>${basedir}/src/main/java</directory>
-                <includes>
-                    <!--Spring bean factory configuration-->
-                    <include>applicationContext.xml</include>
-                </includes>
-            </resource>
-            <resource>
-                <directory>${basedir}/src/main/resources</directory>
-                <includes>
-                    <include>**/*</include>
-                </includes>
-            </resource>
-        </resources>
-    </build>
+    </profiles>    
 </project>
