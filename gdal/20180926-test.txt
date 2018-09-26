@@ -1,0 +1,93 @@
+Group: core-gdal
+  time: 20180926T144624+0000 - 20180926T144654+0000
+  total duration:       30
+  requests:             1164
+  requests per second:  38
+  response duration (ms)
+    min:                7
+    average:            255
+    max:                7893
+    standard deviation: 643
+    quantiles (ms)
+         10%       25
+         20%       36
+         30%       44
+         40%       53
+         50%       63
+         60%       74
+         70%       88
+         80%      117
+         90%      430
+         99%     2543
+       99.9%     4557
+      100.0%     7893 (max. value)
+  response size (bytes)
+    total:              27353020
+    min:                493
+    average:            23499
+    max:                92180
+    standard deviation: 23577
+  response status codes
+    200:                1164 (100%)
+Group: core_getmap-gdal
+  time: 20180926T144700+0000 - 20180926T144729+0000
+  total duration:       30
+  requests:             117
+  requests per second:  3
+  response duration (ms)
+    min:                222
+    average:            2685
+    max:                17205
+    standard deviation: 3143
+    quantiles (ms)
+         10%      649
+         20%     1050
+         30%     1217
+         40%     1429
+         50%     1847
+         60%     2098
+         70%     2312
+         80%     2855
+         90%     4331
+         99%    16574
+       99.9%    16910
+      100.0%    17205 (max. value)
+  response size (bytes)
+    total:              51078872
+    min:                2310
+    average:            436571
+    max:                1180973
+    standard deviation: 356615
+  response status codes
+    200:                 117 (100%)
+Group: gdal_getmap-gdal
+  time: 20180926T144737+0000 - 20180926T144807+0000
+  total duration:       29
+  requests:             195
+  requests per second:  6
+  response duration (ms)
+    min:                39
+    average:            1534
+    max:                3391
+    standard deviation: 1034
+    quantiles (ms)
+         10%      156
+         20%      216
+         30%      268
+         40%     1652
+         50%     1819
+         60%     1967
+         70%     2145
+         80%     2437
+         90%     2800
+         99%     3255
+       99.9%     3344
+      100.0%     3391 (max. value)
+  response size (bytes)
+    total:              68627669
+    min:                2305
+    average:            351936
+    max:                885967
+    standard deviation: 341848
+  response status codes
+    200:                 195 (100%)
