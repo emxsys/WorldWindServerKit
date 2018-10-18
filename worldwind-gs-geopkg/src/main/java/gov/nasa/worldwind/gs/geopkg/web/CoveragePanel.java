@@ -13,7 +13,7 @@ import org.apache.wicket.model.Model;
 import org.apache.wicket.model.PropertyModel;
 import org.apache.wicket.model.ResourceModel;
 
-import com.vividsolutions.jts.geom.Envelope;
+import org.locationtech.jts.geom.Envelope;
 import org.geotools.geopkg.wps.GeoPackageProcessRequest.TilesLayer.TilesCoverage;
 import org.apache.wicket.Component;
 import org.apache.wicket.util.visit.IVisit;

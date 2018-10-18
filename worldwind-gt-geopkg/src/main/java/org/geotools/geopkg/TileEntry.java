@@ -20,7 +20,7 @@ import org.geotools.geopkg.TileMatrix;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.vividsolutions.jts.geom.Envelope;
+import org.locationtech.jts.geom.Envelope;
 import java.util.logging.Level;
 import org.geotools.referencing.CRS;
 import org.opengis.referencing.FactoryException;

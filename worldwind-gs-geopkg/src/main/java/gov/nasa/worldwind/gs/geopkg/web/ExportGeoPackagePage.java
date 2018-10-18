@@ -18,7 +18,7 @@
 package gov.nasa.worldwind.gs.geopkg.web;
 
 import org.geotools.geopkg.wps.GeoPackageProcessRequestTransformer;
-import com.vividsolutions.jts.geom.Envelope;
+import org.locationtech.jts.geom.Envelope;
 import org.geotools.geopkg.wps.GeoPackageProcessRequest;
 import java.io.ByteArrayOutputStream;
 import java.net.URI;

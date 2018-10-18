@@ -97,38 +97,41 @@
         <!-- 
         See the geoserver-<version>.pom file in the GeoServer repository for a 
         reference to the version properties used in a particular GeoServer release. E.g.: 
-            https://repo.boundlessgeo.com/main/org/geoserver/geoserver/2.13.0/geoserver-2.13.0.pom
+            https://repo.boundlessgeo.com/main/org/geoserver/geoserver/2.14.0/geoserver-2.14.0.pom
         You can browse the GeoServer repository to view the current GeoServer artifacts:
             https://repo.boundlessgeo.com/main/org/geoserver/geoserver/
         You can browse the GeoServer extensions for this version here:
-            https://sourceforge.net/projects/geoserver/files/GeoServer/2.13.0/extensions/
+            https://sourceforge.net/projects/geoserver/files/GeoServer/2.14.0/extensions/
         You can download the gdal-plugin jars used in the worldwind-geoserver-dist assemblies here:
-            https://sourceforge.net/projects/geoserver/files/GeoServer/2.13.0/extensions/geoserver-2.13.0-gdal-plugin.zip/download
+            https://sourceforge.net/projects/geoserver/files/GeoServer/2.14.0/extensions/geoserver-2.14.0-gdal-plugin.zip/download
         You can download the ImageID-Ext jars and resourses used in the worldwind-geoserver-dist assemblies here:
-            http://demo.geo-solutions.it/share/github/imageio-ext/releases/1.1.X/1.1.20/
+            http://demo.geo-solutions.it/share/github/imageio-ext/releases/1.1.X/1.1.25/
         -->
         
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!--The GeoServer version used in this build and used for artifacts and assemblies-->
-        <gs.version>2.13.0</gs.version>
+        <gs.version>2.14.0</gs.version>
         <!--The GeoTools version used in this build-->
-        <gt.version>19.0</gt.version>
+        <gt.version>20.0</gt.version>
         <!--The GeoWebCache version-->
-        <gwc.version>1.13.0</gwc.version>
-        <spring.version>4.3.7.RELEASE</spring.version>
-        <spring.security.version>4.0.4.RELEASE</spring.security.version> 
+        <gwc.version>1.14.0</gwc.version>
+        <jts.version>1.16.0</jts.version>
+        <!--Spring versions-->
+        <spring.version>4.3.18.RELEASE</spring.version>
+        <spring.security.version>4.2.7.RELEASE</spring.security.version> 
         <servlet-api.version>3.0.1</servlet-api.version>
         <jetty.version>9.2.13.v20150730</jetty.version>
         <jetty.servlet-api.version>3.1.0</jetty.servlet-api.version>
-        <poi.version>3.14</poi.version>
+        <poi.version>3.17</poi.version>
         <!--Wicket version -->
         <wicket.version>7.6.0</wicket.version>
         <ant.version>1.8.4</ant.version>
         <!--The ImageIO-Ext version; used for GDAL artifacts and assemblies-->
-        <imageio-ext.version>1.1.20</imageio-ext.version>
+        <imageio-ext.version>1.1.25</imageio-ext.version>
         <!--JAI version -->
-        <jaiext.version>1.0.22</jaiext.version>
+        <jaiext.version>1.1.1</jaiext.version>
         <java.awt.headless>true</java.awt.headless>
+        <sun.java2d.d3d>true</sun.java2d.d3d>
         <jvm.opts />
         <jalopy.phase>disabled</jalopy.phase>
         <jalopy.srcExcludesPattern>disabled</jalopy.srcExcludesPattern>
@@ -143,21 +146,32 @@
         <fork.javac>true</fork.javac>
         <javac.maxHeapSize>256m</javac.maxHeapSize>
         <image.tests>true</image.tests>
-        <interactive.tests>false</interactive.tests>
+        <interactive.image>false</interactive.image>
         <windows.leniency>true</windows.leniency>
-        <gf.version>3.2-SNAPSHOT</gf.version>
-        <hibernate-version>3.6.0.Final</hibernate-version>
+        <gf.version>3.3-SNAPSHOT</gf.version>
+        <jasypt.version>1.9.2</jasypt.version>
+        <hibernate-version>3.6.9.Final</hibernate-version>
         <hibernate-generic-dao-version>1.1.0</hibernate-generic-dao-version>
-        <hibernate-spatial-version>1.1.1</hibernate-spatial-version>
-        <hibernate-spatial-h2-version>1.1.1</hibernate-spatial-h2-version>
+        <hibernate-spatial-version>1.1.3.1</hibernate-spatial-version>
+        <hibernate-spatial-h2-version>1.1.3.1</hibernate-spatial-h2-version>
+        <opengeo-geodb.version>0.9</opengeo-geodb.version>
         <!-- NOTE: be careful if upgrading slf4j, check the netcdf and netcdf-out build correcly -->
         <slf4j.version>1.6.4</slf4j.version>
         <joda-time.version>2.8.1</joda-time.version>
         <git.commit.useNative>false</git.commit.useNative>
         <git.commit.runOnlyOnce>true</git.commit.runOnlyOnce>
+        <jackson1.version>1.9.13</jackson1.version>
+        <jackson2.version>2.9.5</jackson2.version>
+        <compress-lzf.version>1.0.3</compress-lzf.version>
+        <marlin.version>0.7.5-Unsafe</marlin.version>
+        <postgresql.jdbc.version>42.1.1</postgresql.jdbc.version>
+        <solrj.version>7.2.1</solrj.version>
+        <jacoco.version>0.8.1</jacoco.version>
+        <argLine>-Xmx${test.maxHeapSize} -enableassertions ${jvm.opts} -Djava.awt.headless=${java.awt.headless} -Dsun.java2d.d3d=${sun.java2d.d3d} -DremoteOwsTests=${remoteOwsTests} -DquietTests=${quietTests} -Dorg.geotools.image.test.enabled=${image.tests} -Dorg.geotools.image.test.interactive=${interactive.image} -Duser.timezone=${user.timezone} -Dwindows.leniency=${windows.leniency} -XX:+TieredCompilation -XX:TieredStopAtLevel=1</argLine>
+        <fmt.action>format</fmt.action>
+        <fmt.skip>false</fmt.skip>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <compress-lzf.version>1.0.3</compress-lzf.version>
     </properties> 
        
     <!--Centralized dependency management of versions-->
@@ -672,7 +686,11 @@
                 <artifactId>gt-geopkg</artifactId>
                 <version>${gt.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>org.geotools</groupId>
+                <artifactId>gt-xml</artifactId>
+                <version>${gt.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.geowebcache</groupId>

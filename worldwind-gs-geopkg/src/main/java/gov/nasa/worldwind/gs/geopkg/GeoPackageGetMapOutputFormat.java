@@ -6,7 +6,7 @@
 package gov.nasa.worldwind.gs.geopkg;
 
 import com.google.common.collect.Sets;
-import com.vividsolutions.jts.geom.Envelope;
+import org.locationtech.jts.geom.Envelope;
 
 import org.geotools.geopkg.GeoPackage;
 import org.geotools.geopkg.Tile;

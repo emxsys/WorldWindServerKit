@@ -7,7 +7,7 @@ package org.geotools.geopkg;
 
 import org.geotools.geopkg.TileEntry;
 import org.geotools.geopkg.TileMatrix;
-import com.vividsolutions.jts.geom.Envelope;
+import org.locationtech.jts.geom.Envelope;
 import org.geotools.geopkg.mosaic.GeoPackageReader;
 import java.io.IOException;
 import java.net.URL;

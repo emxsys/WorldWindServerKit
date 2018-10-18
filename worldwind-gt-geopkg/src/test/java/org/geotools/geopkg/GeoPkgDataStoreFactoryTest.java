@@ -17,7 +17,7 @@
 package org.geotools.geopkg;
 
 import org.geotools.geopkg.GeoPkgDataStoreFactory;
-import com.vividsolutions.jts.geom.Point;
+import org.locationtech.jts.geom.Point;
 import org.geotools.data.DataStore;
 import org.geotools.feature.simple.SimpleFeatureTypeBuilder;
 import org.junit.Rule;

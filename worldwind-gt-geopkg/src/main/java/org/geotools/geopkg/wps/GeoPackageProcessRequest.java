@@ -16,7 +16,7 @@
  */
 package org.geotools.geopkg.wps;
 
-import com.vividsolutions.jts.geom.Envelope;
+import org.locationtech.jts.geom.Envelope;
 import org.geotools.geopkg.TileMatrix;
 import java.awt.Color;
 import java.io.Serializable;

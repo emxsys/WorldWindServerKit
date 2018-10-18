@@ -1,6 +1,6 @@
 package gov.nasa.worldwind.gs.geopkg.wps;
 
-import com.vividsolutions.jts.geom.Envelope;
+import org.locationtech.jts.geom.Envelope;
 
 import org.geotools.geopkg.Entry;
 import org.geotools.geopkg.FeatureEntry;

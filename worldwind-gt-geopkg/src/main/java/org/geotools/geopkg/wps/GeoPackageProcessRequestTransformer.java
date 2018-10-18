@@ -6,7 +6,7 @@
 package org.geotools.geopkg.wps;
 
 import org.geotools.geopkg.wps.GeoPackageProcessRequest;
-import com.vividsolutions.jts.geom.Envelope;
+import org.locationtech.jts.geom.Envelope;
 import java.awt.Color;
 import java.util.List;
 import java.util.logging.Logger;

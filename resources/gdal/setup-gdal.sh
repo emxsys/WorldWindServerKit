@@ -6,8 +6,8 @@ set +x
 # -----------------------------------------------------------------------------
 
 # GEOSERVER_VER and IMAGEIO_EXT_VER will be updated by an ant-task during the build
-GEOSERVER_VER=2.13.0 #Set by ant-task. was: 2.13.0
-IMAGEIO_EXT_VER=1.1.20 #Set by ant-task. was: 1.1.20
+GEOSERVER_VER=2.14.0 #Set by ant-task. was: 2.14.0
+IMAGEIO_EXT_VER=1.1.25 #Set by ant-task. was: 1.1.25
 
 # Paths
 PWD=$(pwd)

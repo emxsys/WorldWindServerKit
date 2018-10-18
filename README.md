@@ -29,17 +29,21 @@ Example:
 
 The versions for GeoServer, GeoTools, ImageIO, JAI and others are defined and 
 maintained in the properties section of the WWSK parent POM. 
-- Also review travis scripts and installation scripts for the old GeoServer version
+To synchronize the WWSK build dependencies with a new GeoServer release, review the 
+GeoServer's POM file version properties (E.g., for GeoServer 2.14, see  
+https://github.com/geoserver/geoserver/blob/2.14.0/src/pom.xml) and adjust the
+WWSK parent POM file version properties to match.
+- Also review Travis scripts and installation scripts for the old GeoServer version
 - If you update the GeoServer version you must download the GDAL extension for
 the new version from the GeoServer distribution site and copy the zip file to the 
-resources folder. For example, for GeoServer 2.13.0, download 
-[geoserver-2.13.0-gdal-plugin.zip](https://sourceforge.net/projects/geoserver/files/GeoServer/2.13.0/extensions/geoserver-2.13.0-gdal-plugin.zip).
+resources folder. For example, for GeoServer 2.14.0, download 
+[geoserver-2.14.0-gdal-plugin.zip](https://sourceforge.net/projects/geoserver/files/GeoServer/2.14.0/extensions/geoserver-2.14.0-gdal-plugin.zip).
 You will need to create a .tgz version of the .zip file for inclusion in the 
 Linux distribution.
 - If you update the ImageIO version you must download the artifacts for the new version
 from [geo-solutions.it](https://demo.geo-solutions.it/share/github/imageio-ext/releases/1.1.X/) 
-and copy them to the resources folder. For example, for ImageIO 1.0.20, download
-[imageio-ext-1.1.20-jars.zip](https://demo.geo-solutions.it/share/github/imageio-ext/releases/1.1.X/1.1.20/imageio-ext-1.1.20-jars.zip).
+and copy them to the resources folder. For example, for ImageIO 1.0.25, download
+[imageio-ext-1.1.25-jars.zip](https://demo.geo-solutions.it/share/github/imageio-ext/releases/1.1.X/1.1.25/imageio-ext-1.1.25-jars.zip).
 You will need to create a .tgz version of the .zip file for inclusion in the 
 Linux distribution.
 

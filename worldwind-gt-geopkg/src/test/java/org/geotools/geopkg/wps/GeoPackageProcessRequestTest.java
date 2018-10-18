@@ -19,7 +19,7 @@
 package org.geotools.geopkg.wps;
 
 import org.geotools.geopkg.wps.GeoPackageProcessRequest;
-import com.vividsolutions.jts.geom.Envelope;
+import org.locationtech.jts.geom.Envelope;
 import org.geotools.geopkg.wps.xml.GPKG;
 import java.net.URI;
 import java.net.URL;

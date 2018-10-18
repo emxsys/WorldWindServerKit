@@ -25,7 +25,7 @@ import org.geotools.geopkg.GeoPackage;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.vividsolutions.jts.geom.Envelope;
+import org.locationtech.jts.geom.Envelope;
 
 /**
  *
