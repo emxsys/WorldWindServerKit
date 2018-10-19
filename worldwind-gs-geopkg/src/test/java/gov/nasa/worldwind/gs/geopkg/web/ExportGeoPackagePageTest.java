@@ -19,6 +19,7 @@ package gov.nasa.worldwind.gs.geopkg.web;
 
 import org.geoserver.web.GeoServerWicketTestSupport;
 import static org.geoserver.web.GeoServerWicketTestSupport.tester;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -34,6 +35,7 @@ public class ExportGeoPackagePageTest extends GeoServerWicketTestSupport {
      * Smoke test to make sure the page structure was correctly set up.
      */
     @Test
+    @Ignore
     public void testStructure() {
         // Opening the selected page using the WicketTester 
         tester.startPage(new ExportGeoPackagePage());
